@@ -3,9 +3,8 @@
 本插件在vim-test上进行修改，可连接前端插件的服务来调用mocha测试工具
 
 使用插件需要在自己的vim配置里面新增下面配置，还需要配合前端的包（还未发部）
-``````````js
-```shell
 
+```js
 function! ConnectMocha() 
 	try 
 		if has('nvim')
