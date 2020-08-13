@@ -2,7 +2,7 @@
 
 
 
-![image](https://github.com/xklalala/vim-test-js-mocha-testing/img.png)
+![image](https://github.com/xklalala/vim-test-js-mocha-testing/blob/master/img.png)
 
 本插件在vim-test上进行修改，可连接前端插件的服务来调用mocha测试工具
 
