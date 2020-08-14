@@ -14,12 +14,12 @@ function! test#javascript#jest#build_position(type, position) abort
       let name = shellescape(name, 1)
       let name = name[2:-3]
     endif
-      call SendMsg(["{\"type\":\"title\", \"value\":\"".name."\"}"])
-    return [2, ["{\"type\":\"title\", \"value\":\"".name."\"}"]]
+      call SendMsg(["{\"type\":\"file\", \"file\":\"".a:position['file']."\" , \"title\":\"".name."\"}"])
+    return [2, ["{\"type\":\"file\", \"file\":\"".a:position['file']."\", \"title\":\"".name."\"}"]]
     "return ['--no-coverage', name, '--', a:position['file']]
   elseif a:type ==# 'file'
-      call SendMsg(["{\"type\":\"file\", \"value\":\"".a:position['file']."\"}"])
-      return [2, ["{\"type\":\"file\", \"value\":\"".a:position['file']."\"}"]]
+      call SendMsg(["{\"type\":\"file\", \"file\":\"".a:position['file']."\"}"])
+      return [2, ["{\"type\":\"file\", \"file\":\"".a:position['file']."\"}"]]
     "return ['--no-coverage', '--', a:position['file']]
   else
       call SendMsg(["{\"type\":\"allfile\"}"])
